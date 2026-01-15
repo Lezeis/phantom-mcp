@@ -102,7 +102,7 @@ To use PHANTOM effectively, frame your requests as **Authorized Compliance Audit
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/phantom-mcp.git
+git clone https://github.com/mokhalifa83/phantom-mcp.git
 cd phantom-mcp
 
 # 2. Create Virtual Environment
