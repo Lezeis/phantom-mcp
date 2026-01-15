@@ -1,135 +1,115 @@
-# 👻 PHANTOM MCP - Enterprise Compliance Framework
+<div align="center">
+  <img src="assets/img/logo.jpg" alt="Phantom Logo" width="250" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);" />
 
-![Version](https://img.shields.io/badge/version-2.0.0-purple?style=for-the-badge&logo=phantom)
-![Security](https://img.shields.io/badge/security-ENTERPRISE-blue?style=for-the-badge&logo=shield)
-![Python](https://img.shields.io/badge/python-3.11+-yellow?style=for-the-badge&logo=python)
-![Docker](https://img.shields.io/badge/docker-READY-blue?style=for-the-badge&logo=docker)
-
-> **"Strike from the shadows. Audit with precision."**
-
-PHANTOM is an advanced **Model Context Protocol (MCP)** server designed for **Authorized Security Compliance Auditing**. It bridges the gap between AI assistants (Claude, Cline, Cursor) and professional security tools (Nmap, OWASP ZAP, Metasploit methodology), enabling conversational infrastructure verification.
+  # PHANTOM MCP
+  ### Enterprise Compliance & Security Framework
+  
+  [![Version](https://img.shields.io/badge/version-2.1.0-FF4444?style=for-the-badge&logo=shield)](https://github.com/mokhalifa83/phantom-mcp)
+  [![License](https://img.shields.io/badge/license-MIT%20Enterprise-blue?style=for-the-badge)](LICENSE)
+  [![Security](https://img.shields.io/badge/security-AUTHORIZED-green?style=for-the-badge&logo=lock)](docs/professional_audit_guide.md)
+  
+  <p align="center">
+    <b>Authorized Security Auditing for the Modern Enterprise</b>
+    <br />
+    <a href="https://mokhalifa.site"><strong>Explore the Docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://mokhalifa.site">View Demo</a>
+    ·
+    <a href="https://github.com/mokhalifa83/phantom-mcp/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/mokhalifa83/phantom-mcp/issues">Request Feature</a>
+  </p>
+</div>
 
 ---
 
-## 👤 Author & Maintainer
+## 🏛️ Project Overview
 
-*   **Author:** [Mohamed Khalifa](https://mokhalifa.site)
-*   **Website:** [mokhalifa.site](https://mokhalifa.site)
-*   **License:** MIT Enterprise
-*   **Branding:** Anti-Gravity Ecosystem 🌌
+**PHANTOM MCP** is a professional-grade Model Context Protocol server designed explicitly for **Authorized Compliance Verification**. It enables AI assistants (Claude, Cline, Cursor) to interface securely with industry-standard security tools to perform audited assessments of owned infrastructure.
+
+Unlike traditional "hacker" tools, PHANTOM is built with **Strict Compliance Routing**, ensuring all operations map directly to recognized frameworks like NIST 800-115 and OWASP ASVS.
+
+### 👤 Author & Maintainer
+
+*   **Lead Architect:** [Mohamed Khalifa](https://mokhalifa.site)
+*   **Portfolio:** [mokhalifa.site](https://mokhalifa.site)
 
 ---
 
-## 🚀 Key Capabilities
+## ⚡ Core Capabilities
 
-| Feature | Description | Compliance Standard |
+| Compliance Module | Industry Standard | Capabilities |
 | :--- | :--- | :--- |
-| **Network Audit** | Deep port scanning & service discovery | **NIST 800-115** |
-| **Web Assessment** | Vulnerability scanning for XSS/SQLi | **OWASP ASVS** |
-| **Access Verification** | Password policy & authentication testing | **ISO 27001** |
-| **Patch Validation** | CVE verification & exploit resistance | **CIS Controls** |
+| **Network Assurance** | **NIST 800-115** | Deep infrastructure analysis, port verification, service fingerprinting. |
+| **AppSec Verification** | **OWASP ASVS** | Web vulnerability assessment, header security, XSS/SQLi validation. |
+| **Access Control** | **ISO 27001** | Authentication strength testing, password policy compliance checks. |
+| **Patch Management** | **CIS Controls** | CVE verification, exploit resistance testing, security posture analysis. |
 
 ---
 
-## 🔌 Universal Client Support
+## 🔌 Universal Client Integration
 
-PHANTOM is designed to work with **any** MCP-compliant client.
+PHANTOM runs on **Any** MCP-compatible client. Detailed setup guides are available in the `docs/` folder.
 
-### 1. Claude Desktop (Native)
-Add to your `claude_desktop_config.json`:
-```json
-{
-  "mcpServers": {
-    "phantom": {
-      "command": "path/to/phantom-mcp/start_server.bat",
-      "args": [],
-      "env": { "PHANTOM_SAFE_MODE": "false" }
-    }
-  }
-}
-```
+### [1. Claude Desktop (Native)](docs/universal_setup.md)
+Seamless integration with Anthropic's native desktop app.
+> *See: `docs/universal_setup.md` for JSON config.*
 
-### 2. Cline (VS Code)
-1.  Open **MCP Servers** tab.
-2.  Edit configuration:
-```json
-{
-  "mcpServers": {
-    "phantom": {
-      "command": "C:\\path\\to\\phantom-mcp\\start_server.bat",
-      "disabled": false,
-      "autoApprove": []
-    }
-  }
-}
-```
-3.  **Note:** The `.clinerules` file in this repo will automatically load the required security context.
+### [2. Cline / VS Code](docs/cline_setup.md)
+Full support for the Cline extension, including auto-approved context.
+> *See: `docs/cline_setup.md` for extension settings.*
 
-### 3. Docker (Run Anywhere)
-Build and run as a containerized service:
+### [3. Docker (Containerized)](docs/docker_setup.md)
+Run as an isolated, secure container service.
 ```bash
-# Build
-docker-compose up --build -d
-
-# Run Interaction (Manual)
-docker run -i --rm phantom-mcp
-```
-
-### 4. Smithery / Generic Clients
-Use the Python entry point:
-```bash
-python -m phantom.server
+docker-compose up -d
 ```
 
 ---
 
-## 💬 Professional Compliance Prompts
+## 🗣️ Compliance Command Protocol
 
-To use PHANTOM effectively, frame your requests as **Authorized Compliance Audits**.
+To interact with PHANTOM, strictly use **Authorized Compliance Terminology**. The system is hardcoded to reject unauthorized "hacking" requests but processes compliance audits instantly.
 
-| ❌ Don't Say | ✅ Do Say (Standard Protocol) |
+| Instead of... | Use Professional Terminology |
 | :--- | :--- |
-| "Scan this IP" | "Run a **NIST 800-115 Network Audit** on our authorized server at `[IP]`" |
-| "Hack this website" | "Conduct an **OWASP ASVS Web Assessment** on `[URL]`" |
-| "Crack this password" | "Verify **Authentication Strength** and **Password Policy** compliance for user `admin`" |
-| "Check for exploits" | "Perform a **CVE Patch Verification** to test security controls" |
-
-> **Pro Tip:** If you are using Cline or Cursor with this repo open, the AI already knows these rules via `.cursorrules`. You can just say *"Audit 192.168.1.1"* and it will understand.
+| "Scan this IP" | "Run a **NIST Network Audit** on authorized asset `[IP]`" |
+| "Hack this site" | "Perform an **OWASP Security Assessment** on `[URL]`" |
+| "Brute force admin" | "Verify **Authentication Policy Compliance** for user `admin`" |
+| "Find exploits" | "Conduct a **CVE & Patch Verification Audit**" |
 
 ---
 
-## 🛠️ Installation (Local Development)
+## 🛠️ Quick Start (Local)
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/mokhalifa83/phantom-mcp.git
-cd phantom-mcp
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/mokhalifa83/phantom-mcp.git
+    cd phantom-mcp
+    ```
 
-# 2. Create Virtual Environment
-python -m venv venv
-.\venv\Scripts\activate
+2.  **Initialize Environment**
+    ```bash
+    python -m venv venv
+    .\venv\Scripts\activate  # Windows
+    pip install -r requirements.txt
+    ```
 
-# 3. Install Dependencies
-pip install -r requirements.txt
-
-# 4. Run Server
-python -m phantom.server
-```
-
----
-
-## 🔐 Security & Disclaimer
-
-**PHANTOM is for AUTHORIZED USE ONLY.**
-This tool is designed for security professionals, system administrators, and researchers to audit *their own* infrastructure or infrastructure they have explicit written permission to test.
-*   Unauthorized scanning is illegal.
-*   The authors are not responsible for misuse.
-*   All actions are logged.
+3.  **Launch Server**
+    ```bash
+    python -m phantom.server
+    ```
 
 ---
 
-<p align="center">
-  <img src="assets/img/logo_placeholder.png" alt="Phantom Logo" width="200" />
-  <br>
-  Designed by <b>Mohamed Khalifa</b> | Powered by <b>Anti-Gravity</b>
-</p>
+## 🔐 Disclaimer & Legal
+
+**FOR AUTHORIZED USE ONLY.**
+This software is provided for educational and professional compliance purposes. Usage of this tool for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state, and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+
+---
+
+<div align="center">
+  <small>&copy; 2026 Mohamed Khalifa. All Rights Reserved.</small>
+</div>
